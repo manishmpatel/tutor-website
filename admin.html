@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin | Peer Tutoring</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">Peer Tutoring</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="tutors.html">Find a Tutor</a>
+            <a href="admin.html" class="active">Admin</a>
+        </div>
+    </nav>
+
+    <main>
+        <section class="admin-section">
+            <div class="admin-card">
+                <h1>Manage Tutors</h1>
+                <p style="color: var(--text-light); margin-bottom: 2rem;">
+                    To add, edit, or remove tutors, edit the <code>data/tutors.json</code> file.
+                </p>
+
+                <h2>How to Add a Tutor</h2>
+                <p style="margin-bottom: 1rem;">Add a new entry to the tutors array in the JSON file:</p>
+
+                <pre style="background: var(--background); padding: 1rem; border-radius: var(--radius); overflow-x: auto; font-size: 0.875rem; line-height: 1.5;"><code>{
+  "id": "6",
+  "name": "Student Name",
+  "grade": 11,
+  "email": "student@school.edu",
+  "subjects": ["Math", "Science"],
+  "bio": "Optional short bio here"
+}</code></pre>
+
+                <h2 style="margin-top: 2rem;">Current Tutors</h2>
+                <div id="tutors-list" style="margin-top: 1rem;">
+                    <p style="color: var(--text-light);">Loading...</p>
+                </div>
+            </div>
+
+            <div class="admin-card">
+                <h2>Quick Reference</h2>
+                <table style="width: 100%; border-collapse: collapse;">
+                    <tr style="border-bottom: 1px solid var(--border);">
+                        <td style="padding: 0.75rem 0; font-weight: 500;">id</td>
+                        <td style="padding: 0.75rem 0; color: var(--text-light);">Unique identifier (any string)</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid var(--border);">
+                        <td style="padding: 0.75rem 0; font-weight: 500;">name</td>
+                        <td style="padding: 0.75rem 0; color: var(--text-light);">Full name of the tutor</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid var(--border);">
+                        <td style="padding: 0.75rem 0; font-weight: 500;">grade</td>
+                        <td style="padding: 0.75rem 0; color: var(--text-light);">Grade level (9, 10, 11, or 12)</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid var(--border);">
+                        <td style="padding: 0.75rem 0; font-weight: 500;">email</td>
+                        <td style="padding: 0.75rem 0; color: var(--text-light);">Contact email address</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid var(--border);">
+                        <td style="padding: 0.75rem 0; font-weight: 500;">subjects</td>
+                        <td style="padding: 0.75rem 0; color: var(--text-light);">Array of subjects: ["Math", "Science"]</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 0.75rem 0; font-weight: 500;">bio</td>
+                        <td style="padding: 0.75rem 0; color: var(--text-light);">Optional short description</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Peer Tutoring Program. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Load and display current tutors
+        fetch('data/tutors.json')
+            .then(r => r.json())
+            .then(data => {
+                const list = document.getElementById('tutors-list');
+                if (data.tutors.length === 0) {
+                    list.innerHTML = '<p style="color: var(--text-light);">No tutors yet.</p>';
+                    return;
+                }
+                list.innerHTML = data.tutors.map(t => `
+                    <div style="display: flex; justify-content: space-between; padding: 0.75rem; background: var(--background); border-radius: var(--radius); margin-bottom: 0.5rem;">
+                        <div>
+                            <strong>${t.name}</strong>
+                            <span style="color: var(--text-light);"> - ${t.grade}th Grade</span>
+                        </div>
+                        <div style="color: var(--text-light);">${t.subjects.join(', ')}</div>
+                    </div>
+                `).join('');
+            })
+            .catch(() => {
+                document.getElementById('tutors-list').innerHTML = '<p style="color: var(--error);">Error loading tutors.</p>';
+            });
+    </script>
+</body>
+</html>

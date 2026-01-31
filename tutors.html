@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find a Tutor | Peer Tutoring</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">Peer Tutoring</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="tutors.html" class="active">Find a Tutor</a>
+            <a href="admin.html">Admin</a>
+        </div>
+    </nav>
+
+    <main>
+        <section class="tutors-header">
+            <h1>Find a Tutor</h1>
+            <div class="filters">
+                <input type="text" id="search" placeholder="Search by name or subject..." class="search-input">
+                <select id="subject-filter" class="filter-select">
+                    <option value="">All Subjects</option>
+                </select>
+                <select id="grade-filter" class="filter-select">
+                    <option value="">All Grades</option>
+                    <option value="9">9th Grade</option>
+                    <option value="10">10th Grade</option>
+                    <option value="11">11th Grade</option>
+                    <option value="12">12th Grade</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="tutors-grid" id="tutors-grid">
+            <!-- Tutors will be loaded here by JavaScript -->
+        </section>
+
+        <div id="no-results" class="no-results hidden">
+            <p>No tutors found matching your search.</p>
+        </div>
+
+        <div id="loading" class="loading">
+            <p>Loading tutors...</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Peer Tutoring Program. All rights reserved.</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

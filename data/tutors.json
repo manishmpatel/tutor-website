@@ -1,0 +1,44 @@
+{
+  "tutors": [
+    {
+      "id": "1",
+      "name": "Sarah Johnson",
+      "grade": 12,
+      "email": "sarah.j@school.edu",
+      "subjects": ["Calculus", "Physics", "AP Chemistry"],
+      "bio": "National Merit Scholar, 4.0 GPA. Love making complex topics simple!"
+    },
+    {
+      "id": "2",
+      "name": "Michael Chen",
+      "grade": 11,
+      "email": "m.chen@school.edu",
+      "subjects": ["Algebra 2", "Geometry", "Computer Science"],
+      "bio": "Math team captain. Patient and encouraging teaching style."
+    },
+    {
+      "id": "3",
+      "name": "Emily Rodriguez",
+      "grade": 12,
+      "email": "emily.r@school.edu",
+      "subjects": ["Spanish", "AP Spanish Literature", "English"],
+      "bio": "Native Spanish speaker. Can help with essays and conversation practice."
+    },
+    {
+      "id": "4",
+      "name": "David Kim",
+      "grade": 10,
+      "email": "d.kim@school.edu",
+      "subjects": ["Biology", "Chemistry"],
+      "bio": "Science Olympiad medalist. Great with lab reports and test prep."
+    },
+    {
+      "id": "5",
+      "name": "Jessica Thompson",
+      "grade": 11,
+      "email": "jess.t@school.edu",
+      "subjects": ["US History", "World History", "AP Government"],
+      "bio": "History buff who makes dates and events stick. Essay help too!"
+    }
+  ]
+}

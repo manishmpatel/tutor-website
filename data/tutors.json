@@ -5,7 +5,7 @@
       "name": "Sarah Johnson",
       "levels": ["Middle", "High"],
       "email": "sarah.j@school.edu",
-      "subjects": ["Calculus", "Physics", "AP Chemistry"],
+      "subjects": ["Algebra1", "Geometry", "Physics Grade 6"],
       "bio": "National Merit Scholar, 4.0 GPA. Love making complex topics simple!"
     },
     {
@@ -13,15 +13,15 @@
       "name": "Michael Chen",
       "levels": ["Elementary", "Middle"],
       "email": "m.chen@school.edu",
-      "subjects": ["Algebra", "Geometry", "Computer Science"],
+      "subjects": ["Elementary School Math", "Math 6/7/8", "Algebra1"],
       "bio": "Math team captain. Patient and encouraging teaching style."
     },
     {
       "id": "3",
       "name": "Emily Rodriguez",
-      "levels": ["Elementary", "Middle", "High"],
+      "levels": ["Elementary", "Middle"],
       "email": "emily.r@school.edu",
-      "subjects": ["Spanish", "AP Spanish Literature", "English"],
+      "subjects": ["Elementary School English", "Middle School Language Arts", "Middle School History"],
       "bio": "Native Spanish speaker. Can help with essays and conversation practice."
     },
     {
@@ -29,15 +29,15 @@
       "name": "David Kim",
       "levels": ["Middle", "High"],
       "email": "d.kim@school.edu",
-      "subjects": ["Biology", "Chemistry"],
+      "subjects": ["Biology Grade 7", "Earth Science Grade 8", "Physics Grade 6"],
       "bio": "Science Olympiad medalist. Great with lab reports and test prep."
     },
     {
       "id": "5",
       "name": "Jessica Thompson",
-      "levels": ["High"],
+      "levels": ["Elementary", "Middle"],
       "email": "jess.t@school.edu",
-      "subjects": ["US History", "World History", "AP Government"],
+      "subjects": ["Elementary School English", "Middle School History", "Middle School Language Arts"],
       "bio": "History buff who makes dates and events stick. Essay help too!"
     }
   ]

@@ -132,9 +132,14 @@ main {
 
 .hero-content {
     flex: 1;
-    text-align: left;
     position: relative;
     z-index: 1;
+}
+
+.hero-content h1,
+.hero-content p,
+.hero-content .btn {
+    text-align: left;
 }
 
 .hero::before {
@@ -170,10 +175,7 @@ main {
 .hero p {
     font-size: 1.25rem;
     opacity: 0.95;
-    margin-bottom: 2.5rem;
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-bottom: 2rem;
     position: relative;
 }
 

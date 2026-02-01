@@ -52,6 +52,10 @@ function renderTutors(tutors) {
 function createTutorCard(tutor) {
     const initials = tutor.name.split(' ').map(n => n[0]).join('').toUpperCase();
     const subjects = tutor.subjects.map(s => `<span class="subject-tag">${escapeHtml(s)}</span>`).join('');
+    const levels = tutor.levels.map(l => {
+        const levelName = l === 'Elementary' ? 'Elementary' : l === 'Middle' ? 'Middle School' : 'High School';
+        return `<span class="level-tag">${escapeHtml(levelName)}</span>`;
+    }).join('');
 
     return `
         <div class="tutor-card">
@@ -59,7 +63,7 @@ function createTutorCard(tutor) {
                 <div class="tutor-avatar">${initials}</div>
                 <div class="tutor-info">
                     <h3>${escapeHtml(tutor.name)}</h3>
-                    <span class="tutor-grade">${tutor.grade}th Grade</span>
+                    <div class="tutor-levels">${levels}</div>
                 </div>
             </div>
             <div class="tutor-subjects">${subjects}</div>
@@ -97,9 +101,9 @@ function setupFilters() {
             const matchesSearch = tutor.name.toLowerCase().includes(searchTerm) ||
                 tutor.subjects.some(s => s.toLowerCase().includes(searchTerm));
             const matchesSubject = !selectedSubject || tutor.subjects.includes(selectedSubject);
-            const matchesGrade = !selectedGrade || tutor.grade.toString() === selectedGrade;
+            const matchesLevel = !selectedGrade || tutor.levels.includes(selectedGrade);
 
-            return matchesSearch && matchesSubject && matchesGrade;
+            return matchesSearch && matchesSubject && matchesLevel;
         });
 
         renderTutors(filtered);

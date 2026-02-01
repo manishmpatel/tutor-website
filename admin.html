@@ -33,7 +33,7 @@
                 <pre style="background: var(--background); padding: 1rem; border-radius: var(--radius); overflow-x: auto; font-size: 0.875rem; line-height: 1.5;"><code>{
   "id": "6",
   "name": "Student Name",
-  "grade": 11,
+  "levels": ["Elementary", "Middle", "High"],
   "email": "student@school.edu",
   "subjects": ["Math", "Science"],
   "bio": "Optional short bio here"
@@ -57,8 +57,8 @@
                         <td style="padding: 0.75rem 0; color: var(--text-light);">Full name of the tutor</td>
                     </tr>
                     <tr style="border-bottom: 1px solid var(--border);">
-                        <td style="padding: 0.75rem 0; font-weight: 500;">grade</td>
-                        <td style="padding: 0.75rem 0; color: var(--text-light);">Grade level (9, 10, 11, or 12)</td>
+                        <td style="padding: 0.75rem 0; font-weight: 500;">levels</td>
+                        <td style="padding: 0.75rem 0; color: var(--text-light);">Array of levels: ["Elementary", "Middle", "High"]</td>
                     </tr>
                     <tr style="border-bottom: 1px solid var(--border);">
                         <td style="padding: 0.75rem 0; font-weight: 500;">email</td>
@@ -95,7 +95,7 @@
                     <div style="display: flex; justify-content: space-between; padding: 0.75rem; background: var(--background); border-radius: var(--radius); margin-bottom: 0.5rem;">
                         <div>
                             <strong>${t.name}</strong>
-                            <span style="color: var(--text-light);"> - ${t.grade}th Grade</span>
+                            <span style="color: var(--text-light);"> - ${t.levels.join(', ')}</span>
                         </div>
                         <div style="color: var(--text-light);">${t.subjects.join(', ')}</div>
                     </div>

@@ -211,6 +211,112 @@ main {
     width: 100%;
 }
 
+/* Content Sections */
+.content-section {
+    background: var(--surface);
+    padding: 3rem;
+    border-radius: var(--radius-lg);
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+}
+
+.content-section h2 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--text);
+}
+
+.content-section p {
+    color: var(--text-light);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.mission-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 1.5rem;
+}
+
+.mission-list li {
+    padding: 1rem 0 1rem 2rem;
+    position: relative;
+    color: var(--text);
+    font-size: 1.05rem;
+    line-height: 1.6;
+    border-bottom: 1px solid var(--border);
+}
+
+.mission-list li:last-child {
+    border-bottom: none;
+}
+
+.mission-list li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+/* How It Works */
+.how-it-works {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.how-card {
+    background: var(--background);
+    padding: 2rem;
+    border-radius: var(--radius);
+}
+
+.how-card h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--primary-dark);
+}
+
+.how-card p {
+    color: var(--text-light);
+    margin-bottom: 0;
+}
+
+/* Commitment Section */
+.commitment .features {
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+}
+
+/* CTA Styles */
+.cta-intro {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin-bottom: 1rem;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cta .btn-primary {
+    background: var(--primary);
+    color: white;
+}
+
+.cta .btn-primary:hover {
+    background: var(--primary-dark);
+}
+
 /* Features Section */
 .features {
     display: grid;

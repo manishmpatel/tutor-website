@@ -2,43 +2,38 @@
   "tutors": [
     {
       "id": "1",
-      "name": "Sarah Johnson",
-      "levels": ["Middle", "High"],
-      "email": "sarah.j@school.edu",
-      "subjects": ["Algebra1", "Geometry", "Physics Grade 6"],
-      "bio": "National Merit Scholar, 4.0 GPA. Love making complex topics simple!"
+      "name": "Amelia Ellis",
+      "levels": ["Elementary", "Middle", "High"],
+      "email": "Ameliaellis@bernardsboe.com",
+      "subjects": ["Elementary School English", "Elementary School Math", "Algebra1", "Geometry"]
     },
     {
       "id": "2",
-      "name": "Michael Chen",
+      "name": "Caroline Small",
       "levels": ["Elementary", "Middle"],
-      "email": "m.chen@school.edu",
-      "subjects": ["Elementary School Math", "Math 6/7/8", "Algebra1"],
-      "bio": "Math team captain. Patient and encouraging teaching style."
+      "email": "CarolineSmall@bernardsboe.com",
+      "subjects": ["Elementary School English", "Middle School Language Arts"]
     },
     {
       "id": "3",
-      "name": "Emily Rodriguez",
+      "name": "Adhirai Karthik",
       "levels": ["Elementary", "Middle"],
-      "email": "emily.r@school.edu",
-      "subjects": ["Elementary School English", "Middle School Language Arts", "Middle School History"],
-      "bio": "Native Spanish speaker. Can help with essays and conversation practice."
+      "email": "AdhirajKarthik@bernardsboe.com",
+      "subjects": ["Elementary School Math", "Elementary School English", "Physics Grade 6", "Biology Grade 7", "Algebra1"]
     },
     {
       "id": "4",
-      "name": "David Kim",
-      "levels": ["Middle", "High"],
-      "email": "d.kim@school.edu",
-      "subjects": ["Biology Grade 7", "Earth Science Grade 8", "Physics Grade 6"],
-      "bio": "Science Olympiad medalist. Great with lab reports and test prep."
+      "name": "Maya Koukos",
+      "levels": ["Elementary", "Middle", "High"],
+      "email": "MayaKoukos@bernardsboe.com",
+      "subjects": ["Elementary School Math", "Math 6/7/8", "Algebra1", "Geometry"]
     },
     {
       "id": "5",
-      "name": "Jessica Thompson",
+      "name": "Avanika Malhotra",
       "levels": ["Elementary", "Middle"],
-      "email": "jess.t@school.edu",
-      "subjects": ["Elementary School English", "Middle School History", "Middle School Language Arts"],
-      "bio": "History buff who makes dates and events stick. Essay help too!"
+      "email": "Avanika.Malhotra@bernardsboe.com",
+      "subjects": ["Elementary School English", "Elementary School Math", "Biology Grade 7", "Earth Science Grade 8", "Math 6/7/8"]
     }
   ]
 }

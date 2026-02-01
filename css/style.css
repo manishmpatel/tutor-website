@@ -118,14 +118,21 @@ main {
 
 /* Hero Section */
 .hero {
-    text-align: center;
-    padding: 5rem 3rem;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    padding: 4rem;
     background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 50%, var(--accent) 100%);
     color: white;
     border-radius: var(--radius-lg);
     margin-bottom: 4rem;
     position: relative;
     overflow: hidden;
+}
+
+.hero-content {
+    flex: 1;
+    text-align: left;
 }
 
 .hero::before {
@@ -140,12 +147,12 @@ main {
 }
 
 .hero-image {
-    width: 200px;
+    width: 220px;
     height: auto;
-    border-radius: 50%;
-    margin-bottom: 2rem;
+    border-radius: var(--radius-lg);
     box-shadow: 0 8px 30px rgba(0,0,0,0.2);
     border: 4px solid rgba(255,255,255,0.3);
+    flex-shrink: 0;
 }
 
 .hero h1 {
@@ -696,7 +703,17 @@ footer {
     }
 
     .hero {
+        flex-direction: column;
         padding: 3rem 1.5rem;
+        text-align: center;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .hero-image {
+        width: 150px;
     }
 
     .hero h1 {
